@@ -6,10 +6,10 @@
     <title th:text="#{page.title}">タイトル</title>
 </head>
 <body>
-    <h1 th:text="#{page.title}">Thymeleaf課題</h1>
-    <h2>出力画面</h2>
+	<h1 th:text="#{page.title}">Thymeleaf課題</h1>
+    <h2 th:text="#{page.output}">出力画面</h2>
     <p th:text="'入力された値は「' + ${val} + '」です。'"></p>
 
-    <a th:href="@{/input(previous=${val})}">入力画面へ戻る</a>
+    <a th:href="@{/input(previous=${val})}" th:text="#{page.back}">入力画面へ戻る</a>
 </body>
 </html>
